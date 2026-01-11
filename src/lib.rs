@@ -100,7 +100,7 @@ impl Widget for CircleGauge<'_> {
         let cx = px_w as f64 / 2.0;
         let cy = px_h as f64 / 2.0;
 
-        let radius = cx.min(cy) - 2.0;
+        let radius = cx.min(cy);
         let stroke = self.stroke.clamp(0.0, radius);
 
         for cell_y in 0..area.height {
